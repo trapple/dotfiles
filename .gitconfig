@@ -1,0 +1,11 @@
+[user]
+	name = trapple
+	email = trapplejp@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[alias]
+	co = checkout
+	ci = commit
+	di = diff
