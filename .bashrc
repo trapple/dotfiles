@@ -1,3 +1,6 @@
+alias ls='ls -Gla'
+
+export LSCOLORS=gxfxcxdxbxegedabagacad
 export SVN_EDITOR="vim";
 export PERL_CPANM_OPT="--local-lib=~/perl5";
 export PERL_LOCAL_LIB_ROOT="/Users/trapple/perl5";
