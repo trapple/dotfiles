@@ -1,15 +1,44 @@
 syntax on
 set number
 set encoding=utf-8
-set fileencodings=sjis,iso-2022-jp,euc-jp,utf-8
-set tabstop=4
-"set autoindent
+"set fileencodings=sjis,iso-2022-jp,euc-jp,utf-8
+set tabstop=2
+set autoindent
 "set cindent
 set shiftwidth=4
 set expandtab
+set hlsearch
+set cursorline 
+
+"insertモードから抜ける
+inoremap <silent> jj <ESC>
+inoremap <silent> <C-j> j
+inoremap <silent> kk <ESC>
+inoremap <silent> <C-k> k
+
+" 挿入モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+"カーソル後の文字削除
+inoremap <silent> <C-d> <Del>
+
+"引用符, 括弧の設定
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap <> <><Left>
+
+"選択した部分を検索
+vnoremap * "zy:let @/ = @z<CR>n
+
+"filetype
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
-
 filetype plugin on
 
 " vundleを使うためのおまじない
@@ -22,6 +51,7 @@ Bundle 'petdance/vim-perl'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
 " Bundle 'thinca/vim-quickrun'
+Bundle 'surround.vim'
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
