@@ -14,8 +14,13 @@ export PATH="$HOME/.rbenv/bin:$PATH";
 if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 alias plackup='plenv exec plackup --access-log=/dev/null';
 
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH;
-
 function pmver() {
   [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
 }
+
+shopt -s dotglob
+mybashfiles='/Users/trapple/.mybashrc/*.bashrc'
+for bashrc in ${mybashfiles}
+do
+  source ${bashrc}
+done
