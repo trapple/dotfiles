@@ -8,7 +8,7 @@ set autoindent
 set shiftwidth=4
 set expandtab
 set hlsearch
-set cursorline 
+""set cursorline 
 
 "insertモードから抜ける
 inoremap <silent> jj <ESC>
@@ -48,7 +48,7 @@ call vundle#rc('~/.vim/bundle')
 " 使うプラグインを指定
 Bundle 'petdance/vim-perl'
 " Bundle 'hotchpotch/perldoc-vim'
-" Bundle 'Shougo/neocomplcache'
+""Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
 " Bundle 'thinca/vim-quickrun'
 Bundle 'surround.vim'
