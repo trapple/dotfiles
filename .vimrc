@@ -6,6 +6,7 @@ set autoindent
 set shiftwidth=4
 set expandtab
 set hlsearch
+set backspace=indent,eol,start
 
 " 脱カーソルキー強制ギブス
 nnoremap <Up> <NOP>
@@ -40,18 +41,24 @@ autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 filetype plugin on
 
-" vundleを使うためのおまじない
-set rtp+=~/.vim/vundle/
-call vundle#rc('~/.vim/bundle')
+" NeoBundle Setting 
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" 使うプラグインを指定
-Bundle 'petdance/vim-perl'
-" Bundle 'hotchpotch/perldoc-vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-" Bundle 'thinca/vim-quickrun'
-Bundle 'surround.vim'
-Bundle 'YankRing.vim'
+NeoBundle 'petdance/vim-perl'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'surround.vim'
+NeoBundle 'YankRing.vim'
+NeoBundle 'kien/ctrlp.vim'
+
+filetype plugin indent on
+NeoBundleCheck
 
 " neocomplcache setting
 let g:neocomplcache_enable_at_startup = 1
