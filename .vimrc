@@ -1,26 +1,22 @@
 syntax on
 set number
 set encoding=utf-8
-"set fileencodings=sjis,iso-2022-jp,euc-jp,utf-8
 set tabstop=2
 set autoindent
-"set cindent
 set shiftwidth=4
 set expandtab
 set hlsearch
-""set cursorline 
 
-"insertモードから抜ける
-inoremap <silent> jj <ESC>
-inoremap <silent> <C-j> j
-inoremap <silent> kk <ESC>
-inoremap <silent> <C-k> k
+" 脱カーソルキー強制ギブス
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 
-" 挿入モードでのカーソル移動
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 "カーソル後の文字削除
 inoremap <silent> <C-d> <Del>
@@ -32,6 +28,9 @@ inoremap ( ()<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 inoremap <> <><Left>
+
+"ハイライトを解除
+nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
 
 "選択した部分を検索
 vnoremap * "zy:let @/ = @z<CR>n
@@ -48,22 +47,28 @@ call vundle#rc('~/.vim/bundle')
 " 使うプラグインを指定
 Bundle 'petdance/vim-perl'
 " Bundle 'hotchpotch/perldoc-vim'
-""Bundle 'Shougo/neocomplcache'
-" Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
 " Bundle 'thinca/vim-quickrun'
 Bundle 'surround.vim'
+Bundle 'YankRing.vim'
 
-" Use neocomplcache.
+" neocomplcache setting
 let g:neocomplcache_enable_at_startup = 1
-" Use underbar completion.
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
- " Use smartcase.
- let g:neocomplcache_enable_smart_case = 1
- " Use camel case completion.
- let g:neocomplcache_enable_camel_case_completion = 1
- " Select with <TAB>
- inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:neocomplcache_enable_smart_case = 1
+"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
-nmap <Leader>r <plug>(quickrun)
+" neosnippet setting
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neocomplcache_snippets_force_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+let g:neosnippet#snippets_directory='~/.vim/dict/'
