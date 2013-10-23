@@ -3,7 +3,7 @@ set number
 set encoding=utf-8
 set tabstop=2
 set autoindent
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set hlsearch
 set backspace=indent,eol,start
@@ -19,16 +19,14 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
+" Window幅調整
+nnoremap <Up> <C-w>5+ 
+nnoremap <Down> <C-w>5- 
+nnoremap <Left> <C-w>10>
+nnoremap <Right> <C-w>10<
+
 "カーソル後の文字削除
 inoremap <silent> <C-d> <Del>
-
-"引用符, 括弧の設定
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap <> <><Left>
 
 "ハイライトを解除
 nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
@@ -56,6 +54,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'surround.vim'
 NeoBundle 'YankRing.vim'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'rhysd/accelerated-jk'
 
 filetype plugin indent on
 NeoBundleCheck
@@ -79,3 +78,8 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 let g:neosnippet#snippets_directory='~/.vim/dict/'
+
+" accelerated-jk setting
+let g:accelerated_jk_acceleration_table = [12,5,3,1]
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
