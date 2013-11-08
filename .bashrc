@@ -18,16 +18,18 @@ export SVN_EDITOR='vim -c "set fenc=utf-8"'
 # homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-# plevn
+# plenv
 if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 alias plackup='plenv exec plackup --access-log=/dev/null'
 
 #perl
+alias perldoc="perldoc -M Pod::Text::Color::Delight"
 function pmver() {
   [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;"
 }
