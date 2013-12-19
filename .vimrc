@@ -60,6 +60,7 @@ NeoBundle 'rhysd/accelerated-jk'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'mhinz/vim-startify'
 
 filetype plugin indent on
 NeoBundleCheck
@@ -110,9 +111,16 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 
 " javascript-libraries-syntax.vim setting
-let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs'
+let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,jasmine'
 
 " emmet setting
 let g:user_emmet_settings = {
 \ 'lang': 'ja'
 \ }
+
+" vim-startify setting
+let g:startify_custom_header = ""
+let g:startify_bookmarks = [
+\ '~/.vimrc',
+\ ]
+let g:startify_session_dir = '~/.vim/session'
