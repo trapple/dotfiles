@@ -61,6 +61,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mhinz/vim-startify'
+NeoBundle 'itchyny/lightline.vim'
 
 filetype plugin indent on
 NeoBundleCheck
@@ -124,3 +125,9 @@ let g:startify_bookmarks = [
 \ '~/.vimrc',
 \ ]
 let g:startify_session_dir = '~/.vim/session'
+
+" lightline.vim setting
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ }
+set laststatus=2

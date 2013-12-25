@@ -2,7 +2,10 @@ alias ls='ls -Gla'
 alias firefox='open -a Firefox'
 alias ssh='ssh -o ServerAliveInterval=60'
 alias rm='mv2trash'
+
+# vim
 alias vi='vim'
+export TERM=xterm-256color
 
 # bash
 export HISTSIZE=10000
