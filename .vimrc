@@ -36,6 +36,7 @@ nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
 vnoremap * "zy:let @/ = @z<CR>n
 
 "filetype
+autocmd BufNewFile,BufRead *.cgi    set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 filetype plugin on
