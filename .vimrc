@@ -139,3 +139,4 @@ nnoremap <leader>p :CtrlP<CR>
 nnoremap <leader>P :CtrlPClearCache<CR>:CtrlP<CR><CR>
 nnoremap ,pp :CtrlP<CR>
 nnoremap ,p :CtrlPClearCache<CR>:CtrlP<CR><CR>
+set wildignore+=*/bower_components/*,*/node_modules/*
