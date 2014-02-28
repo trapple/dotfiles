@@ -144,3 +144,11 @@ nnoremap <leader>P :CtrlPClearCache<CR>:CtrlP<CR><CR>
 nnoremap ,pp :CtrlP<CR>
 nnoremap ,p :CtrlPClearCache<CR>:CtrlP<CR><CR>
 set wildignore+=*/bower_components/*,*/node_modules/*
+
+" ctags setting
+nnoremap t <Nop>
+nnoremap tt g<C-]>
+nnoremap <silent> tj :<C-U>tag<CR>
+nnoremap <silent> tk :<C-U>pop<CR>
+nnoremap <silent> tl :<C-U>tags<CR>
+
