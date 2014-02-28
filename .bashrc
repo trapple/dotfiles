@@ -37,11 +37,3 @@ function pmver() {
   [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;"
 }
 
-# worksoace 
-shopt -s dotglob
-mybashfiles='/Users/trapple/.mybashrc/*.bashrc'
-for bashrc in ${mybashfiles}
-do
-  source ${bashrc}
-done
-shopt -u dotglob
