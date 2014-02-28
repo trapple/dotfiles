@@ -1,0 +1,27 @@
+term xterm-256color
+scrollback 10000
+utf8 on
+caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%='
+hardstatus alwayslastline '%m/%d %02c:%s %{= .g}%H%{-} %L=%-w%45L>%{= g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
+
+bind S eval "exec sh -c 'screen -X hardcopy -h hardcopy; cat hardcopy | tail -n 10000 | /usr/sbin/sendmail masuda@vivi-design.com'"
+
+#bind x command
+
+# change meta key
+defescape ^Tt
+escape ^Tt
+
+# split window
+bind s eval split focus "select 0"
+bind ^s eval split focus "select 0"
+bind | eval "split -v" focus "select 0"
+
+# resize window
+bind r eval 'command -c resize'
+bind ^r eval 'command -c resize'
+bind + eval 'command -c resize'
+bind - eval 'command -c resize'
+bind -c resize + eval 'resize +1' 'command -c resize'
+bind -c resize - eval 'resize -1' 'command -c resize'
+
