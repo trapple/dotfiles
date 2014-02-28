@@ -1,0 +1,7 @@
+*~
+.DS_Store
+.*.swp
+sftp-config.json
+node_modules
+bower_components
+ctags
