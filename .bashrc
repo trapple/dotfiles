@@ -1,4 +1,5 @@
 alias ls='ls -Gla'
+alias cl='clear'
 alias firefox='open -a Firefox'
 alias ssh='ssh -o ServerAliveInterval=60'
 alias rm='mv2trash'
