@@ -67,6 +67,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'c9s/perlomni.vim'
 
 filetype plugin indent on
 NeoBundleCheck
