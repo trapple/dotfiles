@@ -9,6 +9,9 @@ set expandtab
 set hlsearch
 set backspace=indent,eol,start
 
+" Fキー
+nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
+
 " 脱カーソルキー強制ギブス
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
