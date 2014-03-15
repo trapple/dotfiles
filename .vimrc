@@ -67,6 +67,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'istib/vifm.vim'
 "NeoBundle 'c9s/perlomni.vim'
 
 filetype plugin indent on
@@ -152,3 +153,5 @@ nnoremap <silent> tj :<C-U>tag<CR>
 nnoremap <silent> tk :<C-U>pop<CR>
 nnoremap <silent> tl :<C-U>tags<CR>
 
+" vifm setting
+nnoremap ,fm :EditVifm<CR>
