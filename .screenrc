@@ -1,5 +1,6 @@
 term xterm-256color
-scrollback 10000
+scrollback 30000
+defscrollback 30000
 utf8 on
 caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%='
 hardstatus alwayslastline '%m/%d %02c:%s %{= .g}%H%{-} %L=%-w%45L>%{= g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
