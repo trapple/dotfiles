@@ -72,6 +72,8 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'istib/vifm.vim'
+NeoBundle 'vim-scripts/taglist.vim'
+
 "NeoBundle 'c9s/perlomni.vim'
 
 filetype plugin indent on
@@ -162,3 +164,12 @@ nnoremap ,fm :EditVifm<CR>
 
 " color
 highlight Search term=reverse ctermbg=27 guibg=Blue
+
+" taglist.vim setting
+"set tags = tags
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_Show_One_File = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Exit_OnlyWindow = 1
+let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property;I:inner'
+nnoremap <silent> ,l :TlistToggle<CR><C-w>w
