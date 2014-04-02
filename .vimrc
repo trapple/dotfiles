@@ -159,3 +159,6 @@ nnoremap <silent> tl :<C-U>tags<CR>
 
 " vifm setting
 nnoremap ,fm :EditVifm<CR>
+
+" color
+highlight Search term=reverse ctermbg=27 guibg=Blue
