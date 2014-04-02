@@ -1,4 +1,4 @@
---append=yes
+--append=no
 --recurse=yes
 --langmap=Perl:+.psgi
 --exclude=node_modules
