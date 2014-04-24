@@ -14,3 +14,6 @@ HISTSIZE=50000
 SAVEHIST=50000
 setopt hist_ignore_dups
 setopt share_history   
+
+# キーバインドをvimに
+bindkey -v
