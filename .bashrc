@@ -9,12 +9,16 @@ alias vi='vim'
 export TERM=xterm-256color
 
 # bash
+export LANG=ja_JP.UTF-8
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups
 export HISTCONTROL=ignorespace
 export HISTIGNORE="cd*:ls*"
 # unix commands 
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# set prompt
+PS1="\w $ "
 
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
