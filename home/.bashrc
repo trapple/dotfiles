@@ -1,14 +1,13 @@
 alias ls='ls -Gla'
 alias cl='clear'
-alias firefox='open -a Firefox'
 alias ssh='ssh -o ServerAliveInterval=60'
-alias rm='mv2trash'
 
 # vim
 alias vi='vim'
 export TERM=xterm-256color
 
 # bash
+export LANG=ja_JP.UTF-8
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups
 export HISTCONTROL=ignorespace
@@ -16,13 +15,11 @@ export HISTIGNORE="cd*:ls*"
 # unix commands 
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
+# set prompt
+PS1="\w $ "
+
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
-
-# homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -38,3 +35,11 @@ function pmver() {
   [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;"
 }
 
+# local setting
+shopt -s dotglob
+bashlocal="$HOME/.bash_local/*.bashrc"
+for bashrc in ${bashlocal}
+do
+  source ${bashrc}
+done
+shopt -u dotglob
