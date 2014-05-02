@@ -1,6 +1,12 @@
-alias ls='ls -Gla'
 alias cl='clear'
 alias ssh='ssh -o ServerAliveInterval=60'
+
+# ls color
+if [[ $OSTYPE =~ ^darwin ]]; then
+  alias ls='ls -Gla'
+elif [[ $OSTYPE =~ ^linux ]]; then
+  alias ls='ls -la --color'
+fi
 
 # vim
 alias vi='vim'
