@@ -10,8 +10,8 @@ set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
-noremap ; :
-noremap : ;
+nnoremap ; :
+nnoremap : ;
 
 " Fキー
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
