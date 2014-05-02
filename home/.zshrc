@@ -31,7 +31,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # キーバインドをvimに
-bindkey -v
+# bindkey -v
 
 # dir名を打つだけで移動する
 setopt auto_cd
@@ -52,7 +52,6 @@ export TERM=xterm-256color
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
 
 # homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
