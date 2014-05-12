@@ -58,7 +58,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'petdance/vim-perl'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neomru.vim'
@@ -81,23 +81,21 @@ NeoBundle 'vim-scripts/taglist.vim'
 filetype plugin indent on
 NeoBundleCheck
 
-" neocomplcache setting
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplcache_enable_smart_case = 1
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+" neocomplete setting
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " neosnippet setting
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neocomplcache_snippets_force_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
-imap <expr><TAB> pumvisible() ? "\<C-j>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-inoremap <expr><CR> neosnippet#expandable() ? neosnippet#expand_impl() : pumvisible() ? neocomplcache#close_popup() : "<CR>"
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><CR> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? neocomplete#close_popup() : "<CR>"
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
