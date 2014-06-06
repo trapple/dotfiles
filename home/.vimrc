@@ -1,5 +1,4 @@
 syntax on
-"colorscheme darkblue
 set number
 set encoding=utf-8
 set tabstop=2
@@ -75,8 +74,16 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'istib/vifm.vim'
 NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 "NeoBundle 'c9s/perlomni.vim'
+
+" color scheme
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jeffreyiacono/vim-colors-wombat'
+NeoBundle 'nanotech/jellybeans.vim'
+colorscheme hybrid
+
 
 filetype plugin indent on
 NeoBundleCheck
