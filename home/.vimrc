@@ -9,9 +9,6 @@ set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
-nnoremap ; :
-nnoremap : ;
-
 " Fキー
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
 
@@ -75,6 +72,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'istib/vifm.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'vim-scripts/TwitVim'
+
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -180,3 +179,11 @@ let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
 let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property;I:inner'
 nnoremap <silent> ,l :TlistToggle<CR><C-w>w
+
+" TwitVim setting
+let twitvim_count = 40
+nnoremap ,tp :<C-u>PosttoTwitter<CR>
+nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>w
+nnoremap ,tl :<C-u>ListTwitter 
+nnoremap ,ts :<C-u>SearchTwitter
+
