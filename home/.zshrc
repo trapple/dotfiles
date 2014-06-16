@@ -45,8 +45,9 @@ setopt list_packed
 setopt nolistbeep
 
 # vim
-alias vi='vim'
+alias vi='/usr/local/bin/vim'
 export TERM=xterm-256color
+export EDITOR='/usr/local/bin/vim'
 
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
@@ -87,3 +88,19 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
+#pcd(peco-cd)
+PECO_CD_FILE=$HOME/.peco/.peco-cd
+function pcd() {
+  if [ $1 = "add" ]; then
+    if [ $2 ]; then
+      echo "add $2 to $PECO_CD_FILE"
+      echo $2 >> $PECO_CD_FILE
+    fi
+  elif [ $1 = "edit" ]; then
+    if [ $EDITOR ]; then
+      $EDITOR $PECO_CD_FILE
+    fi
+  else
+    cd $(cat $PECO_CD_FILE | peco)
+  fi
+}
