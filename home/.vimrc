@@ -37,6 +37,8 @@ nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
 
 "選択した部分を検索
 vnoremap * "zy:let @/ = @z<CR>n
+"選択した文字列を置換
+vnoremap / "zy :%s/<C-R>"/
 
 "filetype
 autocmd BufNewFile,BufRead *.cgi    set filetype=perl
