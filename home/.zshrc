@@ -6,6 +6,9 @@ alias ls="ls -Gla"
 alias firefox='open -a Firefox'
 alias ssh='ssh -o ServerAliveInterval=60'
 
+# fpath
+fpath=($HOME/.zsh/func $fpath)
+
 # enviroment
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -88,28 +91,8 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-#pcd(peco-cd)
-PECO_CD_FILE=$HOME/.peco/.peco-cd #お気に入りを記録するファイル
-function pcd() {
-  if [ $1 ]; then
-    if [ $1 = "add" ]; then
-      if [ $2 ]; then
-        ADD_DIR=$2
-        if [ $2 = "." ]; then
-          ADD_DIR=$(pwd) 
-        fi
-        echo "add $ADD_DIR to $PECO_CD_FILE"
-        echo $ADD_DIR >> $PECO_CD_FILE
-      fi
-    elif [ $1 = "edit" ]; then
-      if [ $EDITOR ]; then
-        $EDITOR $PECO_CD_FILE
-      fi
-    fi
-  else
-    cd $(cat $PECO_CD_FILE | peco)
-  fi
-}
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+#pcd(peco-cd)
+autoload -Uz pcd
