@@ -76,6 +76,7 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'maksimr/vim-jsbeautify'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -189,3 +190,6 @@ nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>w
 nnoremap ,tl :<C-u>ListTwitter 
 nnoremap ,ts :<C-u>SearchTwitter
 
+
+" vim-jsbeautify
+nnoremap ,j :call JsBeautify()<cr>
