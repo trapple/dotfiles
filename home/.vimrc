@@ -75,7 +75,7 @@ NeoBundle 'istib/vifm.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/TwitVim'
-
+NeoBundle 'scrooloose/syntastic'
 
 "NeoBundle 'c9s/perlomni.vim'
 
