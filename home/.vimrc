@@ -190,6 +190,16 @@ nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>w
 nnoremap ,tl :<C-u>ListTwitter 
 nnoremap ,ts :<C-u>SearchTwitter
 
+"peco
+function! PecoFind(q)
+  let ret = system("mdfind " . a:q . " | peco --query " . a:q)
+  for filename in split(ret, "\n")
+    execute "e" filename
+    break
+  endfor
+endfunction
+command! -nargs=1 Vip :call PecoFind(<f-args>)
+nnoremap ,ppp :Vip 
 
 " vim-jsbeautify
 nnoremap ,j :call JsBeautify()<cr>
