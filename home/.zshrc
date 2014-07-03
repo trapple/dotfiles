@@ -94,3 +94,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 #pcd(peco-cd)
 autoload -Uz pcd
+
+#vim+peco
+function vip() {
+  if [ $1 -a $1 = "." ]; then
+    RET=$(mdfind -onlyin ./ -name $1 | egrep -v "node_modules|bower_components" | sed "s#$(pwd)##g" | peco)    
+  elif [ $1 ]; then
+    RET=$(mdfind -onlyin ~/ -name $1 | peco --query $1)    
+  fi
+  if [ $RET ]; then
+    vi $RET
+  fi
+}
