@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/trapple/workspace/sandbox/archives-digital-js-sp/src/common'
+let g:netrw_dirhist_2='/Users/trapple/workspace/sandbox/javascript/sinonjs/test'
+let g:netrw_dirhist_3='/Users/trapple/workspace/daspotal/src/js_modules/archives-digital-js-sp/grunt'
