@@ -3,7 +3,6 @@ alias ll="/bin/ls -l"
 alias lf="/bin/ls -F"
 alias la="/bin/ls -a"
 alias ls="ls -Gla"
-alias firefox='open -a Firefox'
 alias ssh='ssh -o ServerAliveInterval=60'
 
 # fpath
@@ -54,11 +53,6 @@ export EDITOR='/usr/local/bin/vim'
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
 
-# homebrew
-export PATH=/usr/local/bin:$PATH
-export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -95,14 +89,30 @@ export PATH="/usr/local/heroku/bin:$PATH"
 #pcd(peco-cd)
 autoload -Uz pcd
 
-#vim+peco
-function vip() {
-  if [ $1 -a $1 = "." ]; then
-    RET=$(mdfind -onlyin ./ -name $1 | egrep -v "node_modules|bower_components" | sed "s#$(pwd)##g" | peco)    
-  elif [ $1 ]; then
-    RET=$(mdfind -onlyin ~/ -name $1 | peco --query $1)    
-  fi
-  if [ $RET ]; then
-    vi $RET
-  fi
-}
+# Macのみ
+if [[ $OSTYPE =~ ^darwin ]]; then
+
+  alias updatedb='/usr/libexec/locate.updatedb'
+  alias firefox='open -a Firefox'
+
+  # homebrew
+  export PATH=/usr/local/bin:$PATH
+  export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
+  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+  # boot2docker
+  export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+
+  #vim+peco
+  function vip() {
+    if [ $1 -a $1 = "." ]; then
+      RET=$(mdfind -onlyin ./ -name $1 | egrep -v "node_modules|bower_components" | sed "s#$(pwd)/##g" | peco)    
+    elif [ $1 ]; then
+      RET=$(mdfind -onlyin ~/ -name $1 | peco --query $1)    
+    fi
+    if [ $RET ]; then
+      vi $RET
+    fi
+  }
+
+fi
