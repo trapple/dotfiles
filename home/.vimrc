@@ -23,6 +23,9 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
 " Window幅調整
 nnoremap <Up> <C-w>5+ 
 nnoremap <Down> <C-w>5- 
