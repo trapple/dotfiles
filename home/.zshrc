@@ -92,7 +92,7 @@ autoload -Uz pcd
 # Macのみ
 if [[ $OSTYPE =~ ^darwin ]]; then
 
-  alias updatedb='/usr/libexec/locate.updatedb'
+  alias updatedb='sudo /usr/libexec/locate.updatedb'
   alias firefox='open -a Firefox'
 
   # homebrew
