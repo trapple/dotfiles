@@ -17,7 +17,9 @@ autoload -U compinit
 compinit
 
 # プロンプト設定
-PROMPT="%F{3}%C%%%f "
+source ~/.zsh/git-prompt.sh
+setopt PROMPT_SUBST
+PROMPT='%F{3}%c%f%F{1}$(__git_ps1 " (%s)")%f%F{3} %%%f '
 PROMPT2="%_%% "
 
 # コマンド履歴
