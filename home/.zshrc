@@ -17,7 +17,7 @@ autoload -U compinit
 compinit
 
 # プロンプト設定
-PROMPT="%C%% "
+PROMPT="%F{3}%C%%%f "
 PROMPT2="%_%% "
 
 # コマンド履歴
