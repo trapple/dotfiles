@@ -256,3 +256,8 @@ nnoremap ,ppp :Vip
 
 " vim-jsbeautify
 nnoremap ,j :call JsBeautify()<cr>
+
+" -----------------------
+" perltidy
+" -----------------------
+map ,pt <Esc>:%! perltidy --se<CR>
