@@ -264,6 +264,11 @@ nnoremap ,j :call JsBeautify()<cr>
 map ,pt <Esc>:%! perltidy --se<CR>
 
 " -----------------------
+" firefoxで開く
+" -----------------------
+nnoremap ,ff :!open -a firefox %<cr>
+
+" -----------------------
 " pathogen setting
 " -----------------------
 execute pathogen#infect()
