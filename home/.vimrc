@@ -75,7 +75,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'surround.vim'
-NeoBundle 'YankRing.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'rhysd/accelerated-jk'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -195,7 +194,9 @@ let g:user_emmet_settings = {
 \ 'lang': 'ja'
 \ }
 
+" -----------------------
 " vim-startify setting
+" -----------------------
 let g:startify_custom_header = ""
 let g:startify_bookmarks = [
 \ '~/.vimrc',
@@ -208,27 +209,37 @@ let g:lightline = {
 \ }
 set laststatus=2
 
+" -----------------------
 " CtrlP setting
-nnoremap <leader>p :CtrlP<CR>
+" -----------------------
+nnoremap <C-p> :CtrlP<CR>
 nnoremap <leader>P :CtrlPClearCache<CR>:CtrlP<CR><CR>
 nnoremap ,pp :CtrlP<CR>
 nnoremap ,p :CtrlPClearCache<CR>:CtrlP<CR><CR>
 set wildignore+=*/bower_components/*,*/node_modules/*
 
+" -----------------------
 " ctags setting
+" -----------------------
 nnoremap t <Nop>
 nnoremap tt g<C-]>
 nnoremap <silent> tj :<C-U>tag<CR>
 nnoremap <silent> tk :<C-U>pop<CR>
 nnoremap <silent> tl :<C-U>tags<CR>
 
+" -----------------------
 " vifm setting
+" -----------------------
 nnoremap ,fm :EditVifm<CR>
 
+" -----------------------
 " color
+" -----------------------
 highlight Search term=reverse ctermbg=27 guibg=Blue
 
+" -----------------------
 " taglist.vim setting
+" -----------------------
 "set tags = tags
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_Show_One_File = 1
@@ -237,14 +248,18 @@ let Tlist_Exit_OnlyWindow = 1
 let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property;I:inner'
 nnoremap <silent> ,l :TlistToggle<CR><C-w>w
 
+" -----------------------
 " TwitVim setting
+" -----------------------
 let twitvim_count = 40
 nnoremap ,tp :<C-u>PosttoTwitter<CR>
 nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>w
 nnoremap ,tl :<C-u>ListTwitter 
 nnoremap ,ts :<C-u>SearchTwitter
 
+" -----------------------
 "peco
+" -----------------------
 function! PecoFind(q)
   let ret = system("mdfind " . a:q . " | peco --query " . a:q)
   for filename in split(ret, "\n")
@@ -255,7 +270,9 @@ endfunction
 command! -nargs=1 Vip :call PecoFind(<f-args>)
 nnoremap ,ppp :Vip 
 
+" -----------------------
 " vim-jsbeautify
+" -----------------------
 nnoremap ,j :call JsBeautify()<cr>
 
 " -----------------------
