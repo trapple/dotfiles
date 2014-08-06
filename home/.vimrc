@@ -88,8 +88,9 @@ NeoBundle 'istib/vifm.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/TwitVim'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'scrooloose/syntastic'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -261,3 +262,8 @@ nnoremap ,j :call JsBeautify()<cr>
 " perltidy
 " -----------------------
 map ,pt <Esc>:%! perltidy --se<CR>
+
+" -----------------------
+" pathogen setting
+" -----------------------
+execute pathogen#infect()
