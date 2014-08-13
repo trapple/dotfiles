@@ -90,6 +90,8 @@ NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'rbgrouleff/bclose.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -289,3 +291,8 @@ nnoremap ,ff :!open -a firefox %<cr>
 " pathogen setting
 " -----------------------
 execute pathogen#infect()
+
+" -----------------------
+" bclose setting
+" -----------------------
+nnoremap bc :Bclose<CR>
