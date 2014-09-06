@@ -92,6 +92,9 @@ NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'rbgrouleff/bclose.vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'vim-scripts/Align'
+NeoBundle 'hotchpotch/perldoc-vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -165,7 +168,9 @@ if has('conceal')
 endif
 let g:neosnippet#snippets_directory='~/.vim/dict/'
 
+" -----------------------
 " accelerated-jk setting
+" -----------------------
 let g:accelerated_jk_acceleration_table = [12,5,3,1]
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
@@ -296,3 +301,8 @@ execute pathogen#infect()
 " bclose setting
 " -----------------------
 nnoremap bc :Bclose<CR>
+
+" -----------------------
+" syntastic setting
+" -----------------------
+let g:syntastic_scss_checkers = ['scss_lint']

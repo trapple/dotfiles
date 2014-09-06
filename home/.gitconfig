@@ -11,3 +11,5 @@
 	co = checkout
 	ci = commit
 	di = diff
+[credential]
+	helper = cache

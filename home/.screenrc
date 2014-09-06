@@ -26,3 +26,16 @@ bind - eval 'command -c resize'
 bind -c resize + eval 'resize +1' 'command -c resize'
 bind -c resize - eval 'resize -1' 'command -c resize'
 
+# Ctrl-t y でウィンドウ制御モード(仮)に移行する
+# Escキーが入力されるまで継続する
+bind y eval echo 'Operate Window' 'command -c operate'
+bind -c operate j eval 'focus down' 'command -c operate'
+bind -c operate k eval 'focus up' 'command -c operate'
+bind -c operate h eval 'focus left' 'command -c operate'
+bind -c operate l eval 'focus right' 'command -c operate'
+bind -c operate t eval 'focus top' 'command -c operate'
+bind -c operate + eval 'resize -v +1' 'command -c operate'
+bind -c operate - eval 'resize -v -1' 'command -c operate'
+bind -c operate > eval 'resize -h +1' 'command -c operate'
+bind -c operate < eval 'resize -h -1' 'command -c operate'
+bind -c operate = eval 'resize -h =' 'command -c operate'

@@ -60,14 +60,15 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # plenv
-if which plenv > /dev/null; then eval "$(plenv init -)"; fi
-alias plackup='plenv exec plackup --access-log=/dev/null'
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
 
 #perl
 alias perldoc="perldoc -M Pod::Text::Color::Delight"
 function pmver() {
   [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;"
 }
+alias reply="PERL_RL=Caroline reply"
 
 #peco
 function peco-select-history() {
@@ -98,7 +99,6 @@ if [[ $OSTYPE =~ ^darwin ]]; then
   alias firefox='open -a Firefox'
 
   # homebrew
-  export PATH=/usr/local/bin:$PATH
   export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 

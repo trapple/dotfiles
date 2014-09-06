@@ -1,0 +1,24 @@
+local PCD_FILE=$HOME/.peco/.peco-cd
+local PCD_RETURN
+if [ $1 ] && [ $1 = "add" ]; then
+  if [ $2 ]; then
+    ADD_DIR=$2
+    if [ $2 = "." ]; then
+      ADD_DIR=$(pwd) 
+    fi
+    echo "add $ADD_DIR to $PCD_FILE"
+    echo $ADD_DIR >> $PCD_FILE
+  fi
+elif [ $1 ] && [ $1 = "edit" ]; then
+  if [ $EDITOR ]; then
+    $EDITOR $PCD_FILE
+  fi
+elif [ $1 ] && [ $1 = "." ]; then
+  PCD_RETURN=$(/bin/ls -F | grep /$ | sort | peco)
+else
+  PCD_RETURN=$(cat $PCD_FILE | sort | peco)
+fi
+
+if [ $PCD_RETURN ]; then
+  cd $PCD_RETURN
+fi
