@@ -56,8 +56,8 @@ export EDITOR='/usr/local/bin/vim'
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
 
 # rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # plenv
 export PATH="$HOME/.plenv/bin:$PATH"
