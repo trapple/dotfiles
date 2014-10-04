@@ -12,3 +12,4 @@ home/.vim/bundle
 home/.vim/tmp
 home/.vim/tmp/*
 UserInterfaceState.xcuserstate
+.netrwhist
