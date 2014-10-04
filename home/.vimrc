@@ -97,6 +97,7 @@ NeoBundle 'rbgrouleff/bclose.vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'hotchpotch/perldoc-vim'
+NeoBundle 'thinca/vim-ref'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -308,3 +309,9 @@ nnoremap bc :Bclose<CR>
 " syntastic setting
 " -----------------------
 let g:syntastic_scss_checkers = ['scss_lint']
+
+" -----------------------
+" ref.vim setting
+" -----------------------
+" Uniteでperldoc
+nnoremap <silent> ,up :<C-u>Unite ref/perldoc<CR>
