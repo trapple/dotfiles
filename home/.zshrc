@@ -4,6 +4,8 @@ alias lf="/bin/ls -F"
 alias la="/bin/ls -a"
 alias ls="ls -Gla"
 alias ssh='ssh -o ServerAliveInterval=60'
+alias :q='exit' 
+alias ce="carton exec --"
 
 # fpath
 fpath=($HOME/.zsh/func $fpath)
