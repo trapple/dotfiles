@@ -23,11 +23,13 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
 " インサートモードのカーソル移動（emacs風）
 inoremap <C-A> <C-[>^i
 inoremap <C-E> <C-[><S-A>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-[>b <C-[><S-b>i
+inoremap <C-[>f <C-[>l<S-w>i
 
 " Window幅調整
 nnoremap <Up> <C-w>5+ 
