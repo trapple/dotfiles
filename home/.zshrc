@@ -7,6 +7,9 @@ alias ssh='ssh -o ServerAliveInterval=60'
 alias :q='exit' 
 alias ce="carton exec --"
 
+# ~/local/bin
+export PATH=$HOME/local/bin:$PATH
+
 # fpath
 fpath=($HOME/.zsh/func $fpath)
 
