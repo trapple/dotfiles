@@ -121,5 +121,10 @@ if [[ $OSTYPE =~ ^darwin ]]; then
       vi $RET
     fi
   }
-
 fi
+
+# color diff
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff'
+fi
+alias diffy='diff -y --suppress-common-lines'
