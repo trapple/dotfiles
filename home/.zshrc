@@ -7,6 +7,14 @@ alias ssh='ssh -o ServerAliveInterval=60'
 alias :q='exit' 
 alias ce="carton exec --"
 
+# ls color
+if [[ $OSTYPE =~ ^darwin ]]; then
+  alias ls='ls -Gla'
+elif [[ $OSTYPE =~ ^linux ]]; then
+  alias ls='ls -la --color'
+fi
+
+
 # ~/local/bin
 export PATH=$HOME/local/bin:$PATH
 
@@ -53,9 +61,9 @@ setopt list_packed
 setopt nolistbeep
 
 # vim
-alias vi='/usr/local/bin/vim'
+alias vi=vim
 export TERM=xterm-256color
-export EDITOR='/usr/local/bin/vim'
+export EDITOR=vi
 
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
