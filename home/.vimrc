@@ -68,7 +68,7 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'petdance/vim-perl'
@@ -88,7 +88,6 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'istib/vifm.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/TwitVim'
@@ -111,9 +110,9 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
 NeoBundle 'nanotech/jellybeans.vim'
-colorscheme hybrid
+colorscheme desert
 
-
+call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
@@ -242,11 +241,6 @@ nnoremap tt g<C-]>
 nnoremap <silent> tj :<C-U>tag<CR>
 nnoremap <silent> tk :<C-U>pop<CR>
 nnoremap <silent> tl :<C-U>tags<CR>
-
-" -----------------------
-" vifm setting
-" -----------------------
-nnoremap ,fm :EditVifm<CR>
 
 " -----------------------
 " color
