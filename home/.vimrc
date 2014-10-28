@@ -30,6 +30,9 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-[>b <C-[><S-b>i
 inoremap <C-[>f <C-[>l<S-w>i
+inoremap <C-p> <C-[>ka
+inoremap <C-n> <C-[>ja
+
 
 " Window幅調整
 nnoremap <Up> <C-w>5+ 
@@ -98,6 +101,9 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'mbbill/undotree'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-localrc'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -288,7 +294,7 @@ nnoremap ,j :call JsBeautify()<cr>
 " -----------------------
 " perltidy
 " -----------------------
-map ,pt <Esc>:%! perltidy --se<CR>
+map <silent> ,pt :<C-u>%! perltidy --se<CR>
 
 " -----------------------
 " firefoxで開く
@@ -315,3 +321,19 @@ let g:syntastic_scss_checkers = ['scss_lint']
 " -----------------------
 " Uniteでperldoc
 nnoremap <silent> ,up :<C-u>Unite ref/perldoc<CR>
+
+" -----------------------
+" Quickrun setting
+" -----------------------
+let g:quickrun_config = {
+\   '_' : {
+\     'outputter/buffer/split': 'vertical botright',
+\     'runner': 'vimproc',
+\     'runner/vimproc/updatetime': 40,
+\   },
+\   'carton' : {
+\     'cmdopt': '-Ilib',
+\     'exec': 'carton exec -- perl %o %s'
+\   }
+\ }
+nnoremap <silent> ,r :QuickRun carton<CR>
