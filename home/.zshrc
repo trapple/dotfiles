@@ -128,3 +128,7 @@ if [[ -x `which colordiff` ]]; then
   alias diff='colordiff'
 fi
 alias diffy='diff -y --suppress-common-lines'
+
+# Trash
+alias rm="trash"
+autoload -Uz trash
