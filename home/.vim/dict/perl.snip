@@ -3,9 +3,26 @@ snippet ps
   use warnings;
   use utf8;
   use Carp;
-snippet fatal
+snippet usestrict
+  use strict;
+snippet usecgicarpfatal
   use CGI::Carp qw(fatalsToBrowser);
-snippet udd
+snippet usedatadumper
   use Data::Dumper;
+snippet usedataprinter
+  use Data::Printer { deparse => 1};
+snippet usedataprinterp
+abbr use Data::Perinter;p
+  use Data::Printer { deparse => 1};
+  p ${0}
 snippet say
+alias usefeaturesay
   use feature 'say';
+snippet useencode
+  use Encode;
+snippet useencodeq
+  use Encode qw/encode_utf8 decode_utf8/;
+snippet binmode
+  binmode STDIN,  ":utf8";
+  binmode STDOUT, ':utf8';
+  binmode STDERR, ':utf8';
