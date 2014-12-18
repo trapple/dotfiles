@@ -62,6 +62,7 @@ vnoremap / "zy :%s/<C-R>"/
 autocmd BufNewFile,BufRead *.cgi    set filetype=perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
+autocmd BufNewFile,BufRead *.ep     set filetype=html
 filetype plugin on
 
 " NeoBundle Setting 
