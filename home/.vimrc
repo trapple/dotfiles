@@ -183,9 +183,13 @@ let g:neosnippet#snippets_directory='~/.vim/dict/'
 " -----------------------
 " accelerated-jk setting
 " -----------------------
-let g:accelerated_jk_acceleration_table = [12,5,3,1]
+let g:accelerated_jk_acceleration_table = [3,5,7,12,17,21,24,26,28,30]
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
+nmap l <Plug>(accelerated_jk_l)
+nmap h <Plug>(accelerated_jk_h)
+nnoremap <silent><Plug>(accelerated_jk_l) :<C-u>call accelerated#time_driven#command('l')<CR>
+nnoremap <silent><Plug>(accelerated_jk_h) :<C-u>call accelerated#time_driven#command('h')<CR>
 
 " unite.vim setting
 " バッファ一覧
