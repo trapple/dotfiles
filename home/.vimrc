@@ -9,6 +9,9 @@ set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
+" カーソル
+nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
+
 " Fキー
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
 
