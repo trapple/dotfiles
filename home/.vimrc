@@ -50,10 +50,8 @@ inoremap <C-d> <Del>
 nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
 
 "カッコ
-inoremap "" ""<c-[>i
-inoremap '' ''<c-[>i
-
-
+inoremap "" ""<Left>
+inoremap '' ''<Left>
 
 "選択した部分を検索
 vnoremap * "zy:let @/ = @z<CR>n
