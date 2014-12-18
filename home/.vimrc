@@ -44,7 +44,7 @@ nnoremap <Left> <C-w>10>
 nnoremap <Right> <C-w>10<
 
 "カーソル後の文字削除
-inoremap <silent> <C-d> <Del>
+inoremap <C-d> <Del>
 
 "ハイライトを解除
 nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
