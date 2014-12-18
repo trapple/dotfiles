@@ -33,8 +33,8 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-[>b <C-[><S-b>i
 inoremap <C-[>f <C-[>l<S-w>i
-inoremap <C-p> <C-[>ka
-inoremap <C-n> <C-[>ja
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
 
 
 " Window幅調整
