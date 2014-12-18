@@ -61,9 +61,9 @@ setopt list_packed
 setopt nolistbeep
 
 # vim
-alias vi=vim
+alias vi=/usr/local/bin/vim
 export TERM=xterm-256color
-export EDITOR=vi
+export EDITOR=/usr/local/bin/vim
 
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
