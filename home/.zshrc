@@ -140,3 +140,9 @@ alias diffy='diff -y --suppress-common-lines'
 # Trash
 alias rm="trash"
 autoload -Uz trash
+
+# phpbrew
+source ~/.phpbrew/bashrc
+
+# composer global
+export PATH=~/.composer/vendor/bin/:$PATH
