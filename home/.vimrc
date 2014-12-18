@@ -336,6 +336,14 @@ let g:quickrun_config = {
 \   'carton' : {
 \     'cmdopt': '-Ilib',
 \     'exec': 'carton exec -- perl %o %s'
+\   },
+\   'markdown': {
+\     'type'     : 'markdown',
+\     'outputter': 'null',
+\     'command'  : 'open',
+\     'cmdopt'   : '-a',
+\     'args'     : 'Marked\ 2',
+\     'exec'     : '%c %o %a %s',
 \   }
 \ }
 nnoremap <silent> ,r :QuickRun carton<CR>
