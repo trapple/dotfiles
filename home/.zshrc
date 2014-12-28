@@ -114,7 +114,6 @@ if [[ $OSTYPE =~ ^darwin ]]; then
 
   # homebrew
   export CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
-  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
   # boot2docker
   export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
