@@ -92,6 +92,7 @@ function peco-select-history() {
     tac="tail -r"
   fi
   BUFFER=$(history -n 1 | \
+    awk '!a[$0]++' | \
     eval $tac | \
     peco --query "$LBUFFER")
   CURSOR=$#BUFFER
