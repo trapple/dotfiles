@@ -13,3 +13,5 @@
 	di = diff
 [credential]
 	helper = cache
+[init]
+  templatedir = ~/.git_template
