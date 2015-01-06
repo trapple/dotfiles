@@ -176,9 +176,6 @@ inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 imap <expr><CR> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? neocomplete#close_popup() : "<CR>"
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
 let g:neosnippet#snippets_directory='~/.vim/dict/'
 
 " -----------------------
