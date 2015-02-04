@@ -13,3 +13,4 @@ home/.vim/tmp
 home/.vim/tmp/*
 UserInterfaceState.xcuserstate
 .netrwhist
+npm-debug.log
