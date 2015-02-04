@@ -100,7 +100,6 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'scrooloose/syntastic'
@@ -269,15 +268,6 @@ let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
 let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property;I:inner'
 nnoremap <silent> ,l :TlistToggle<CR><C-w>w
-
-" -----------------------
-" TwitVim setting
-" -----------------------
-let twitvim_count = 40
-nnoremap ,tp :<C-u>PosttoTwitter<CR>
-nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>w
-nnoremap ,tl :<C-u>ListTwitter 
-nnoremap ,ts :<C-u>SearchTwitter
 
 " -----------------------
 "peco
