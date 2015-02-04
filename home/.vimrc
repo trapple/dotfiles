@@ -9,6 +9,12 @@ set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 
+" スワップファイルの出力先
+set directory=~/.vim/tmp/
+
+" バックアップファイルの出力先
+set backupdir=~/.vim/tmp/
+
 " カーソル
 nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
 
