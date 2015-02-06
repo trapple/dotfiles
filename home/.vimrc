@@ -311,6 +311,12 @@ nnoremap bc :Bclose<CR>
 " syntastic setting
 " -----------------------
 let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_mode_map = { 
+\ "mode": "active",
+\ "active_filetypes": ["javascript", "json"]
+\}
+
+
 
 " -----------------------
 " ref.vim setting

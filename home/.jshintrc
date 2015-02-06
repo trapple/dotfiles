@@ -1,0 +1,12 @@
+{
+  "strict"    : false,
+  "indent"    : 2,
+  "node"      : true,
+  "camelcase" : true,
+  "unused"    : true,
+  "eqeqeq"    : true,
+  "undef"     : true,
+  "browser"   : true,
+  "jquery"    : true,
+  "devel"     : true
+}
