@@ -113,6 +113,7 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
 NeoBundle 'stephpy/vim-php-cs-fixer'
+NeoBundle 'bkad/CamelCaseMotion'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -350,3 +351,11 @@ let g:quickrun_config = {
 \   }
 \ }
 nnoremap <silent> ,r :QuickRun carton<CR>
+
+" -----------------------
+" CamelCaseMotion setting
+" https://github.com/bkad/CamelCaseMotion
+" -----------------------
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
