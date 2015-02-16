@@ -112,6 +112,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'stephpy/vim-php-cs-fixer'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -141,7 +142,8 @@ let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions',
-    \ 'javascript': $HOME.'/.vim/dict/javascript.dict'
+    \ 'javascript': $HOME.'/.vim/dict/javascript.dict',
+    \ 'php': $HOME.'/.vim/dict/phpunit.dict'
         \ }
 
 " Define keyword.
@@ -313,7 +315,7 @@ nnoremap bc :Bclose<CR>
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_mode_map = { 
 \ "mode": "active",
-\ "active_filetypes": ["javascript", "json"]
+\ "active_filetypes": ["php", "javascript", "json"]
 \}
 
 
