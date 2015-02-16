@@ -215,7 +215,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 
 " javascript-libraries-syntax.vim setting
-let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,jasmine'
+let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,jasmine,react,flux'
 
 " emmet setting
 let g:user_emmet_settings = {
