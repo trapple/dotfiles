@@ -114,6 +114,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
 NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'bkad/CamelCaseMotion'
+NeoBundle 'moll/vim-node'
 
 "NeoBundle 'c9s/perlomni.vim'
 
