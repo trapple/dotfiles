@@ -8,10 +8,16 @@
   "globals": {
     "$": true
   },
+  "ecmaFeatures": {
+    "jsx": true
+  },
   "rules": {
     "strict": 0,
     "no-use-before-define": 0,
     "no-multi-spaces": 0,
-    "quotes": [0, "double"]
+    "no-new": 1,
+    "quotes": [0, "double"],
+    "key-spacing": 0,
+    "camelcase": 0
   }
 }
