@@ -23,8 +23,8 @@ bind r eval 'command -c resize'
 bind ^r eval 'command -c resize'
 bind + eval 'command -c resize'
 bind - eval 'command -c resize'
-bind -c resize + eval 'resize +1' 'command -c resize'
-bind -c resize - eval 'resize -1' 'command -c resize'
+bind -c resize + eval 'resize +5' 'command -c resize'
+bind -c resize - eval 'resize -5' 'command -c resize'
 
 # Ctrl-t y でウィンドウ制御モード(仮)に移行する
 # Escキーが入力されるまで継続する
