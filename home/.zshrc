@@ -48,6 +48,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 bindkey -e
+export WORDCHARS="*?_-.[]~&;=!#$%^(){}<>"
 
 # dir名を打つだけで移動する
 setopt auto_cd
