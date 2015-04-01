@@ -147,3 +147,6 @@ source ~/.phpbrew/bashrc
 
 # composer global
 export PATH=~/.composer/vendor/bin/:$PATH
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
