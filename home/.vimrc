@@ -318,9 +318,10 @@ let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { 
 \ "mode": "active",
-\ "active_filetypes": ["php", "javascript", "json"]
+\ "active_filetypes": ["php", "javascript", "json"],
+\ "passive_filetypes": ["html"]
 \}
-
+let g:syntastic_disabled_filetypes=['html']
 
 
 " -----------------------
