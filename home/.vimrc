@@ -120,6 +120,7 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
+NeoBundle 'y-uuki/syntastic-local-lib-path.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -327,6 +328,11 @@ let g:syntastic_mode_map = {
 \ "passive_filetypes": ["html"]
 \}
 let g:syntastic_disabled_filetypes=['html']
+
+" -----------------------
+" syntastic-local-lib-path
+" -----------------------
+autocmd FileType perl SyntasticLocalLibPath
 
 
 " -----------------------
