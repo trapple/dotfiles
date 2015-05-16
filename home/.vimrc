@@ -327,7 +327,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { 
 \ "mode": "active",
 \ "active_filetypes": ["php", "javascript", "json"],
-\ "passive_filetypes": ["html"]
+\ "passive_filetypes": ["html", "perl"]
 \}
 let g:syntastic_disabled_filetypes=['html']
 
