@@ -122,6 +122,7 @@ NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
 NeoBundle 'y-uuki/syntastic-local-lib-path.vim'
 "NeoBundle 'mxw/vim-jsx'
+NeoBundle 'vifm/vifm.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -379,3 +380,9 @@ map <silent> e <Plug>CamelCaseMotion_e
 " https://github.com/mxw/vim-jsx 
 " -----------------------
 "let g:jsx_ext_required = 0
+
+" -----------------------
+" vifm setting
+" https://github.com/vifm/vifm.vim
+" -----------------------
+nnoremap <silent> ,fm :EditVifm<CR>
