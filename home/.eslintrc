@@ -9,19 +9,22 @@
     "$": true
   },
   "ecmaFeatures": {
-    "jsx": true
+    "jsx": true,
+    "modules": true,
+    "spread": true
   },
   "plugins": [
-    "react": true
+    "react"
   ],
   "rules": {
     "strict": 0,
     "no-use-before-define": 0,
     "no-multi-spaces": 0,
+    "no-alert": 0,
     "no-new": 1,
     "quotes": [0, "double"],
     "key-spacing": 0,
     "camelcase": 0,
-    react/jsx-uses-vars": 1
+    "react/jsx-uses-vars": 1
   }
 }
