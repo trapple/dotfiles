@@ -121,6 +121,7 @@ NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
 NeoBundle 'y-uuki/syntastic-local-lib-path.vim'
+"NeoBundle 'mxw/vim-jsx'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -372,3 +373,9 @@ nnoremap <silent> ,r :QuickRun carton<CR>
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
+
+" -----------------------
+" vim-jsx setting
+" https://github.com/mxw/vim-jsx 
+" -----------------------
+"let g:jsx_ext_required = 0
