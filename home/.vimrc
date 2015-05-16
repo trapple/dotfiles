@@ -75,6 +75,7 @@ autocmd BufNewFile,BufRead *.ep     set filetype=html
 autocmd BufNewFile,BufRead *.tx     set filetype=html
 autocmd BufNewFile,BufRead *.twig   set filetype=html
 autocmd BufNewFile,BufRead *.md     set filetype=markdown
+autocmd BufNewFile,BufRead *.jsx    set filetype=javascript
 filetype plugin on
 
 " NeoBundle Setting 
