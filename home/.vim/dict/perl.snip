@@ -26,3 +26,11 @@ snippet binmode
   binmode STDIN,  ":utf8";
   binmode STDOUT, ':utf8';
   binmode STDERR, ':utf8';
+snippet export
+  use Exporter 'import';
+  use vars qw( @EXPORT );
+  @EXPORT = qw/${0}/;
+snippet exportok
+  use Exporter 'import';
+  use vars qw( @EXPORT_OK );
+  @EXPORT_OK = qw/${0}/;
