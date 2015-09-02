@@ -1,14 +1,6 @@
-snippet moduleExportHash
+snippet moduleExport
 alias mod
-  module.exports = {
-    ${1:code}
-  };
-
-snippet moduleExportsFunc
-alias mod
-  module.exports = function(${1}){
-    ${2:code}
-  };
+  module.exports = ${1}
 
 snippet jqueryDomReady
   $(function () {
