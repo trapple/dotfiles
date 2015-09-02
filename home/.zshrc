@@ -150,3 +150,4 @@ export PATH=~/.composer/vendor/bin/:$PATH
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+autoload -Uz phq
