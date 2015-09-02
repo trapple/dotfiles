@@ -125,6 +125,7 @@ NeoBundle 'y-uuki/syntastic-local-lib-path.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'vifm/vifm.vim'
+NeoBundle 'chase/vim-ansible-yaml'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -388,3 +389,9 @@ map <silent> e <Plug>CamelCaseMotion_e
 " https://github.com/vifm/vifm.vim
 " -----------------------
 nnoremap <silent> ,fm :EditVifm<CR>
+
+" -----------------------
+" vim-ansible-yaml setting
+" https://github.com/chase/vim-ansible-yaml
+" -----------------------
+let g:ansible_options = {'ignore_blank_lines': 0}
