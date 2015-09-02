@@ -42,8 +42,9 @@ inoremap <C-[>f <C-[>l<S-w>i
 inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 
-" jjでインサートモードを抜ける
+" jj/kkでインサートモードを抜ける
 inoremap jj <C-[>
+inoremap kk <C-[>
 
 
 " Window幅調整
