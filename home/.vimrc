@@ -122,7 +122,7 @@ NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
 NeoBundle 'y-uuki/syntastic-local-lib-path.vim'
-"NeoBundle 'mxw/vim-jsx'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'vifm/vifm.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
