@@ -42,3 +42,28 @@ snippet expect
 
 snippet require
   require(${1});
+
+snippet ReactCreateClass
+  React.createClass({
+    render(){
+      return (
+        ${0}
+      );
+    }
+  });
+
+snippet componentDidMount
+  componentDidMount(){
+    ${0:code}
+  }
+
+snippet getInitialState
+  getInitialState(){
+    return {
+      ${0:code}
+    };
+  }
+
+
+snippet dangerouslySetInnerHTML
+  dangerouslySetInnerHTML={{__html: ${0:code}}}
