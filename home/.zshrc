@@ -156,3 +156,9 @@ export PATH=./node_modules/.bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 autoload -Uz phq
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/trapple/Applications/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/trapple/Applications/google-cloud-sdk/completion.zsh.inc'
