@@ -158,3 +158,7 @@ source '/Users/trapple/Applications/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/trapple/Applications/google-cloud-sdk/completion.zsh.inc'
+
+# ndenv
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
