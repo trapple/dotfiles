@@ -148,10 +148,6 @@ source ~/.phpbrew/bashrc
 # composer global
 export PATH=~/.composer/vendor/bin/:$PATH
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH=./node_modules/.bin:$PATH
-
 # golang
 export GOPATH=$HOME/go
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
