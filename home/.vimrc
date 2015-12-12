@@ -4,7 +4,6 @@ set encoding=utf-8
 set tabstop=2
 set autoindent
 set shiftwidth=2
-set expandtab
 set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
