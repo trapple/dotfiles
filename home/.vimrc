@@ -313,7 +313,7 @@ autocmd FileType javascript vnoremap <silent> ,f :EsformatterVisual<CR>
 " -----------------------
 " perltidy
 " -----------------------
-map <silent> ,pt :<C-u>%! perltidy --se<CR>
+autocmd FileType perl map <silent> ,f :<C-u>%! perltidy --se<CR>
 
 " -----------------------
 " firefoxで開く
