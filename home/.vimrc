@@ -106,6 +106,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'millermedeiros/vim-esformatter'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -296,10 +297,17 @@ endfunction
 command! -nargs=1 Vip :call PecoFind(<f-args>)
 nnoremap ,ppp :Vip 
 
+
 " -----------------------
 " vim-jsbeautify
 " -----------------------
-nnoremap ,j :call JsBeautify()<cr>
+nnoremap <silent> ,j :call JsBeautify()<cr>
+
+" -----------------------
+" vim-esformatter
+" -----------------------
+nnoremap <silent> ,es :Esformatter<CR>
+vnoremap <silent> ,es :EsformatterVisual<CR>
 
 " -----------------------
 " perltidy
