@@ -126,6 +126,7 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'vifm/vifm.vim'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'rhysd/vim-clang-format'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -402,3 +403,11 @@ nnoremap <silent> ,fm :EditVifm<CR>
 " https://github.com/chase/vim-ansible-yaml
 " -----------------------
 let g:ansible_options = {'ignore_blank_lines': 0}
+
+" -----------------------
+" clang-format setting
+" https://github.com/rhysd/vim-clang-format
+" -----------------------
+let g:clang_format#style_options = {}
+autocmd FileType c nnoremap ,f :<C-u>ClangFormat<CR>
+autocmd FileType c vnoremap ,f :ClangFormat<CR>
