@@ -307,8 +307,8 @@ nnoremap <silent> ,j :call JsBeautify()<cr>
 " -----------------------
 " vim-esformatter
 " -----------------------
-nnoremap <silent> ,es :Esformatter<CR>
-vnoremap <silent> ,es :EsformatterVisual<CR>
+autocmd FileType javascript nnoremap <silent> ,f :Esformatter<CR>
+autocmd FileType javascript vnoremap <silent> ,f :EsformatterVisual<CR>
 
 " -----------------------
 " perltidy
