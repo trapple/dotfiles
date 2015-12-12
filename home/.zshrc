@@ -69,14 +69,6 @@ export EDITOR=/usr/local/bin/vim
 # subversion
 export SVN_EDITOR='vim -c "set fenc=utf-8"'
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# plenv
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
-
 #perl
 alias perldoc="perldoc -M Pod::Text::Color::Delight"
 function pmver() {
@@ -159,6 +151,6 @@ source '/Users/trapple/Applications/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/trapple/Applications/google-cloud-sdk/completion.zsh.inc'
 
-# ndenv
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
