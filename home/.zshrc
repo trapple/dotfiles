@@ -152,3 +152,6 @@ source '/Users/trapple/Applications/google-cloud-sdk/completion.zsh.inc'
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
