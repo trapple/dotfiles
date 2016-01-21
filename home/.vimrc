@@ -125,6 +125,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'vifm/vifm.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'rhysd/vim-clang-format'
+NeoBundle 'yuuki1/perl-local-lib-path.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -409,3 +410,10 @@ let g:ansible_options = {'ignore_blank_lines': 0}
 let g:clang_format#style_options = {}
 autocmd FileType c nnoremap ,f :<C-u>ClangFormat<CR>
 autocmd FileType c vnoremap ,f :ClangFormat<CR>
+
+" -----------------------
+" perl-local-lib-path
+" https://github.com/yuuki1/perl-local-lib-path.vim
+" -----------------------
+let g:perl_local_lib_path = "lib"
+autocmd FileType perl PerlLocalLibPath
