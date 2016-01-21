@@ -38,10 +38,6 @@ inoremap <C-A> <C-[>^i
 inoremap <C-E> <C-[><S-A>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
-inoremap <C-[>b <C-[><S-b>i
-inoremap <C-[>f <C-[>l<S-w>i
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
 
 " jj/kkでインサートモードを抜ける
 inoremap jj <C-[>
