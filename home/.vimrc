@@ -1,12 +1,14 @@
 syntax on
 set number
 set encoding=utf-8
-set tabstop=2
-set autoindent
 set shiftwidth=2
 set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
+set tabstop=2
+set autoindent
+set expandtab
+set shiftwidth=2
 
 " スワップファイルの出力先
 set directory=~/.vim/tmp/
