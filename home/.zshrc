@@ -7,9 +7,9 @@ alias :q='exit'
 
 # ls color
 if [[ $OSTYPE =~ ^darwin ]]; then
-  alias ls='ls -Gla'
+  alias ls='ls -G'
 elif [[ $OSTYPE =~ ^linux ]]; then
-  alias ls='ls -la --color'
+  alias ls='ls --color'
 fi
 
 
