@@ -375,7 +375,7 @@ let g:quickrun_config = {
 \     'exec'     : '%c %o %a %s',
 \   }
 \ }
-nnoremap <silent> ,r :QuickRun carton<CR>
+autocmd FileType perl nnoremap <silent> ,r :QuickRun carton<CR>
 
 " -----------------------
 " CamelCaseMotion setting
