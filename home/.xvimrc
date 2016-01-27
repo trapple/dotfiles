@@ -1,0 +1,15 @@
+" インサートモードのカーソル移動
+inoremap <C-e> <C-o>$
+
+" jj/kkでインサートモードを抜ける
+inoremap jj <C-[>
+inoremap kk <C-[>
+
+"カッコ
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+
+"選択した部分を検索
+vnoremap * "zy:let @/ = @z<CR>n
+"選択した文字列を置換
+vnoremap / "zy :%s/<C-R>"/
