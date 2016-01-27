@@ -125,6 +125,7 @@ NeoBundle 'vifm/vifm.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'yuuki1/perl-local-lib-path.vim'
+NeoBundle 'LeafCage/yankround.vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -415,3 +416,16 @@ autocmd FileType c vnoremap ,f :ClangFormat<CR>
 " -----------------------
 let g:perl_local_lib_path = "lib"
 autocmd FileType perl PerlLocalLibPath
+
+" -----------------------
+" yankround.vim
+" https://github.com/LeafCage/yankround.vim
+" -----------------------
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
