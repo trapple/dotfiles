@@ -119,7 +119,6 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
-NeoBundle 'yuuki1/syntastic-local-lib-path.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'vifm/vifm.vim'
@@ -331,21 +330,20 @@ nnoremap bc :Bclose<CR>
 
 " -----------------------
 " syntastic setting
+" https://github.com/scrooloose/syntastic
 " -----------------------
+let g:syntastic_check_on_open = 1
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_perl_checkers = ['perl']
 let g:syntastic_mode_map = { 
 \ "mode": "active",
-\ "active_filetypes": ["php", "javascript", "json"],
-\ "passive_filetypes": ["html", "perl"]
+\ "active_filetypes": ["php", "javascript", "json", "perl"],
+\ "passive_filetypes": ["html"]
 \}
+let g:syntastic_enable_perl_checker = 1
 let g:syntastic_disabled_filetypes=['html']
-
-" -----------------------
-" syntastic-local-lib-path
-" -----------------------
-autocmd FileType perl SyntasticLocalLibPath
-
+let g:syntastic_perl_lib_path = ['lib', 'local/lib/perl5']
 
 " -----------------------
 " ref.vim setting
