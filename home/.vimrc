@@ -9,6 +9,7 @@ set tabstop=2
 set autoindent
 set expandtab
 set shiftwidth=2
+set scrolloff=5
 
 " スワップファイルの出力先
 set directory=~/.vim/tmp/
