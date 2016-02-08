@@ -27,7 +27,7 @@ nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
 " Fキー
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
 
-" 脱カーソルキー強制ギブス
+" カーソルキーをWindow幅調整に変更
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
@@ -38,6 +38,12 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
+" Window幅調整
+nnoremap <Up> <C-w>5+ 
+nnoremap <Down> <C-w>5- 
+nnoremap <Left> <C-w>10>
+nnoremap <Right> <C-w>10<
+
 " インサートモードのカーソル移動（emacs風）
 inoremap <C-A> <C-[>^i
 inoremap <C-E> <C-[><S-A>
@@ -46,13 +52,6 @@ inoremap <C-b> <Left>
 
 " jj/kkでインサートモードを抜ける
 inoremap jj <C-[>
-
-
-" Window幅調整
-nnoremap <Up> <C-w>5+ 
-nnoremap <Down> <C-w>5- 
-nnoremap <Left> <C-w>10>
-nnoremap <Right> <C-w>10<
 
 "カーソル後の文字削除
 inoremap <C-d> <Del>
