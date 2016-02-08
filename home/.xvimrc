@@ -3,7 +3,6 @@ inoremap <C-e> <C-o>$
 
 " jj/kkでインサートモードを抜ける
 inoremap jj <C-[>
-inoremap kk <C-[>
 
 "カッコ
 inoremap "" ""<Left>
