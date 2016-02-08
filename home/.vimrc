@@ -11,6 +11,10 @@ set expandtab
 set shiftwidth=2
 set scrolloff=5
 
+" ビープ音の停止
+set visualbell t_vb=
+set noerrorbells
+
 " スワップファイルの出力先
 set directory=~/.vim/tmp/
 
