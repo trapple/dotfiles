@@ -129,6 +129,10 @@ NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'yuuki1/perl-local-lib-path.vim'
 NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'OmniSharp/omnisharp-vim'
+NeoBundle 'OrangeT/vim-csharp'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 "NeoBundle 'c9s/perlomni.vim'
 
@@ -169,7 +173,6 @@ endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 "autocmd BufWritePre :NeoCompleteBufferMakeCache <buffer>
 nnoremap <silent> ,bb :<C-u>NeoCompleteBufferMakeCache<CR>
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Enable omni completion.
 "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -177,6 +180,8 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 "autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -189,6 +194,7 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.cs = '.*[^=\);]'
 
 " neosnippet setting
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -432,3 +438,16 @@ xmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
+
+" -----------------------
+" OmniSharp
+" https://github.com/OmniSharp/omnisharp-vim
+" -----------------------
+let g:OmniSharp_selector_ui = 'unite'
+let g:Omnisharp_start_server = 0
+let g:Omnisharp_stop_server = 0
+autocmd FileType cs nnoremap ,f :OmniSharpCodeFormat<CR>
+autocmd FileType cs nnoremap <leader>ss :OmniSharpStartServer<cr>
+autocmd FileType cs nnoremap <leader>sp :OmniSharpStopServer<cr>
+" set splitbelow
+" set completeopt-=preview
