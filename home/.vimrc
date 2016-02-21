@@ -401,5 +401,3 @@ let g:Omnisharp_stop_server = 0
 autocmd FileType cs nnoremap ,f :OmniSharpCodeFormat<CR>
 autocmd FileType cs nnoremap <leader>ss :OmniSharpStartServer<cr>
 autocmd FileType cs nnoremap <leader>sp :OmniSharpStopServer<cr>
-" set splitbelow
-" set completeopt-=preview
