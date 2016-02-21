@@ -10,6 +10,8 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set scrolloff=5
+set hidden
+set autoread
 
 " ビープ音の停止
 set visualbell t_vb=
