@@ -1,7 +1,6 @@
 syntax on
 set number
 set encoding=utf-8
-set shiftwidth=2
 set hlsearch
 set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
@@ -26,9 +25,6 @@ set backupdir=~/.vim/tmp/
 " カーソル
 nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
 
-" Fキー
-nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d %H:%M:%S")<CR><CR>
-
 " カーソルキーをWindow幅調整に変更
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
@@ -40,7 +36,6 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-" Window幅調整
 nnoremap <Up> <C-w>5+ 
 nnoremap <Down> <C-w>5- 
 nnoremap <Left> <C-w>10>
@@ -52,7 +47,7 @@ inoremap <C-E> <C-[><S-A>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
-" jj/kkでインサートモードを抜ける
+" jjでインサートモードを抜ける
 inoremap jj <C-[>
 
 "カーソル後の文字削除
@@ -126,7 +121,6 @@ NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'moll/vim-node'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'vifm/vifm.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'yuuki1/perl-local-lib-path.vim'
@@ -135,8 +129,6 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'OmniSharp/omnisharp-vim'
 NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'editorconfig/editorconfig-vim'
-
-"NeoBundle 'c9s/perlomni.vim'
 
 " color scheme
 NeoBundle 'w0ng/vim-hybrid'
@@ -179,7 +171,6 @@ nnoremap <silent> ,bb :<C-u>NeoCompleteBufferMakeCache<CR>
 " Enable omni completion.
 "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 "autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 "autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -285,36 +276,6 @@ nnoremap <silent> tl :<C-U>tags<CR>
 highlight Search term=reverse ctermbg=27 guibg=Blue
 
 " -----------------------
-" taglist.vim setting
-" -----------------------
-"set tags = tags
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
-let Tlist_Show_One_File = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Exit_OnlyWindow = 1
-let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property;I:inner'
-nnoremap <silent> ,l :TlistToggle<CR><C-w>w
-
-" -----------------------
-"peco
-" -----------------------
-function! PecoFind(q)
-  let ret = system("mdfind " . a:q . " | peco --query " . a:q)
-  for filename in split(ret, "\n")
-    execute "e" filename
-    break
-  endfor
-endfunction
-command! -nargs=1 Vip :call PecoFind(<f-args>)
-nnoremap ,ppp :Vip 
-
-
-" -----------------------
-" vim-jsbeautify
-" -----------------------
-nnoremap <silent> ,j :call JsBeautify()<cr>
-
-" -----------------------
 " vim-esformatter
 " -----------------------
 autocmd FileType javascript nnoremap <silent> ,f :Esformatter<CR>
@@ -324,11 +285,6 @@ autocmd FileType javascript vnoremap <silent> ,f :EsformatterVisual<CR>
 " perltidy
 " -----------------------
 autocmd FileType perl map <silent> ,f :<C-u>%! perltidy --se<CR>
-
-" -----------------------
-" firefoxで開く
-" -----------------------
-nnoremap ,ff :!open -a firefox %<cr>
 
 " -----------------------
 " pathogen setting
@@ -400,12 +356,6 @@ map <silent> e <Plug>CamelCaseMotion_e
 " https://github.com/mxw/vim-jsx 
 " -----------------------
 "let g:jsx_ext_required = 0
-
-" -----------------------
-" vifm setting
-" https://github.com/vifm/vifm.vim
-" -----------------------
-nnoremap <silent> ,fm :EditVifm<CR>
 
 " -----------------------
 " vim-ansible-yaml setting
