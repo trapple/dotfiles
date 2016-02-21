@@ -11,3 +11,7 @@ set backupdir=~/.vim/tmp
 " undofile
 set undofile
 set undodir=~/.vim/tmp
+
+" タブ移動
+nnoremap <C-TAB> gt
+nnoremap <C-S-TAB> gT
