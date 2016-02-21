@@ -76,7 +76,10 @@ autocmd BufNewFile,BufRead *.md     set filetype=markdown
 autocmd BufNewFile,BufRead *.jsx    set filetype=javascript
 filetype plugin on
 
+" -----------------------
 " NeoBundle Setting 
+" https://github.com/Shougo/neobundle.vim
+" -----------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -142,6 +145,7 @@ NeoBundleCheck
 
 " -----------------------
 " neocomplete setting
+" https://github.com/Shougo/neocomplete.vim
 " -----------------------
 let g:acp_enableAtStartup = 0
 " 起動時に有効
@@ -211,7 +215,10 @@ nmap h <Plug>(accelerated_jk_h)
 nnoremap <silent><Plug>(accelerated_jk_l) :<C-u>call accelerated#time_driven#command('l')<CR>
 nnoremap <silent><Plug>(accelerated_jk_h) :<C-u>call accelerated#time_driven#command('h')<CR>
 
+" -----------------------
 " unite.vim setting
+" https://github.com/Shougo/unite.vim
+" -----------------------
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 " ファイル一覧
